@@ -1,2 +1,2 @@
 # php_libs
-Homemade libraries for php
+PHP libraries made with ❤️ by me
