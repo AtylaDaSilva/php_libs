@@ -1,5 +1,5 @@
 <?php
-    //Converts time in a 00:00:00 format to seconds, minutes or hours as an integer value
+    //Converts time in a HH:MM:SS format to seconds, minutes or hours as an integer value
     function convertTime($time = "00:00:00", $param) {
         if (!isset($time) &&
             $time == "00:00:00" &&
@@ -21,7 +21,7 @@
 
         if ($param == "TO_MINUTES") {
             //Convert to minutes
-            $res = ($h * 60) + $m + (intval($s/60));
+            $res = ($h * 60) + $m + (floatval($s/60));
             
         }
 
@@ -32,8 +32,4 @@
 
         return $res;
     }
-
-    $res = convertTime("00:00:12000", "TO_HOURS");
-
-    echo $res;
 ?>
